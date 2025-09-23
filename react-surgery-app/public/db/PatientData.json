@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "1980-05-15",
+    "gender": "Male",
+    "phone": "555-1234",
+    "email": "john.doe@example.com",
+    "address": "123 Main St, Springfield",
+    "medicalRecordNumber": "MRN1001",
+    "doctorsId": "1"
+  },
+  {
+    "id": "2",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "dateOfBirth": "1975-09-22",
+    "gender": "Female",
+    "phone": "555-5678",
+    "email": "jane.smith@example.com",
+    "address": "456 Oak Ave, Springfield",
+    "medicalRecordNumber": "MRN1002",
+    "doctorsId": "2"
+  },
+  {
+    "id": "3",
+    "firstName": "Michael",
+    "lastName": "Johnson",
+    "dateOfBirth": "1990-12-01",
+    "gender": "Male",
+    "phone": "555-8765",
+    "email": "michael.johnson@example.com",
+    "address": "789 Pine Rd, Springfield",
+    "medicalRecordNumber": "MRN1003",
+    "doctorsId": "3"
+  },
+  {
+    "id": "4",
+    "firstName": "Emily",
+    "lastName": "Williams",
+    "dateOfBirth": "1985-03-10",
+    "gender": "Female",
+    "phone": "555-4321",
+    "email": "emily.williams@example.com",
+    "address": "321 Maple St, Springfield",
+    "medicalRecordNumber": "MRN1004",
+    "doctorsId": "4"
+  },
+  {
+    "id": "5",
+    "firstName": "David",
+    "lastName": "Brown",
+    "dateOfBirth": "1978-07-30",
+    "gender": "Male",
+    "phone": "555-2468",
+    "email": "david.brown@example.com",
+    "address": "654 Cedar Ave, Springfield",
+    "medicalRecordNumber": "MRN1005",
+    "doctorsId": "5"
+  },
+  {
+    "id": "6",
+    "firstName": "Sarah",
+    "lastName": "Davis",
+    "dateOfBirth": "1992-11-18",
+    "gender": "Female",
+    "phone": "555-1357",
+    "email": "sarah.davis@example.com",
+    "address": "987 Birch Rd, Springfield",
+    "medicalRecordNumber": "MRN1006",
+    "doctorsId": "6"
+  },
+  {
+    "id": "7",
+    "firstName": "Matthew",
+    "lastName": "Miller",
+    "dateOfBirth": "1983-02-25",
+    "gender": "Male",
+    "phone": "555-9753",
+    "email": "matthew.miller@example.com",
+    "address": "246 Elm St, Springfield",
+    "medicalRecordNumber": "MRN1007",
+    "doctorsId": "7"
+  },
+  {
+    "id": "8",
+    "firstName": "Jessica",
+    "lastName": "Wilson",
+    "dateOfBirth": "1987-06-14",
+    "gender": "Female",
+    "phone": "555-8642",
+    "email": "jessica.wilson@example.com",
+    "address": "135 Spruce Ave, Springfield",
+    "medicalRecordNumber": "MRN1008",
+    "doctorsId": "8"
+  },
+  {
+    "id": "9",
+    "firstName": "Christopher",
+    "lastName": "Moore",
+    "dateOfBirth": "1995-08-09",
+    "gender": "Male",
+    "phone": "555-7531",
+    "email": "christopher.moore@example.com",
+    "address": "369 Willow Rd, Springfield",
+    "medicalRecordNumber": "MRN1009",
+    "doctorsId": "9"
+  },
+  {
+    "id": "10",
+    "firstName": "Ashley",
+    "lastName": "Taylor",
+    "dateOfBirth": "1989-04-27",
+    "gender": "Female",
+    "phone": "555-1597",
+    "email": "ashley.taylor@example.com",
+    "address": "258 Aspen St, Springfield",
+    "medicalRecordNumber": "MRN1010",
+    "doctorsId": "10"
+  }
+]

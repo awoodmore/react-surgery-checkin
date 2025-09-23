@@ -1,0 +1,67 @@
+body {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+
+  .start-over {
+    margin-top: 20px;
+  }
+
+  .start-button {
+    width: 200px;
+    height: 100px;
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button-selection {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn.m-1 {
+    width: 150px;
+    height: 75px;
+  }
+
+  h2.center,
+  h3.center {
+    text-align: center;
+  }
+
+  .appointment-summary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .no-appointment-found {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
