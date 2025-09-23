@@ -1,3 +1,17 @@
+i) Open the react-surgery-checkin folder in VSCode
+
+ii) Use Terminal to move to the react-surgery-app folder
+
+iii) in Terminal type:
+
+npm install next
+
+then...
+
+npm run dev
+
+------------------
+
 This sample code simulates a surgery check-in system.
 
 The assumption is that the patient has made a booking for the surgery and has come into the surgery.
