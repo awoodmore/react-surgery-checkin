@@ -9,7 +9,16 @@
     "email": "john.doe@example.com",
     "address": "123 Main St, Springfield",
     "medicalRecordNumber": "MRN1001",
-    "doctorsId": "1"
+    "doctorsId": "1",
+    "doctorsName": "Dr. Smith",
+    "appointments": [
+      {
+        "appointmentId": "A3",
+        "doctorsId": "4",
+        "doctorsName": "Dr. Patel",
+        "appointmentTime": "10:45"
+      }
+    ]
   },
   {
     "id": "2",
@@ -21,7 +30,16 @@
     "email": "jane.smith@example.com",
     "address": "456 Oak Ave, Springfield",
     "medicalRecordNumber": "MRN1002",
-    "doctorsId": "2"
+    "doctorsId": "2",
+    "doctorsName": "Dr. Johnson",
+    "appointments": [
+      {
+        "appointmentId": "A5",
+        "doctorsId": "1",
+        "doctorsName": "Dr. Smith",
+        "appointmentTime": "08:30"
+      }
+    ]
   },
   {
     "id": "3",
@@ -33,7 +51,16 @@
     "email": "michael.johnson@example.com",
     "address": "789 Pine Rd, Springfield",
     "medicalRecordNumber": "MRN1003",
-    "doctorsId": "3"
+    "doctorsId": "3",
+    "doctorsName": "Dr. Lee",
+    "appointments": [
+      {
+        "appointmentId": "A1",
+        "doctorsId": "7",
+        "doctorsName": "Dr. Nguyen",
+        "appointmentTime": "09:15"
+      }
+    ]
   },
   {
     "id": "4",
@@ -45,7 +72,16 @@
     "email": "emily.williams@example.com",
     "address": "321 Maple St, Springfield",
     "medicalRecordNumber": "MRN1004",
-    "doctorsId": "4"
+    "doctorsId": "4",
+    "doctorsName": "Dr. Patel",
+    "appointments": [
+      {
+        "appointmentId": "A8",
+        "doctorsId": "8",
+        "doctorsName": "Dr. Martinez",
+        "appointmentTime": "15:40"
+      }
+    ]
   },
   {
     "id": "5",
@@ -57,7 +93,16 @@
     "email": "david.brown@example.com",
     "address": "654 Cedar Ave, Springfield",
     "medicalRecordNumber": "MRN1005",
-    "doctorsId": "5"
+    "doctorsId": "5",
+    "doctorsName": "Dr. Kim",
+    "appointments": [
+      {
+        "appointmentId": "A4",
+        "doctorsId": "9",
+        "doctorsName": "Dr. Thompson",
+        "appointmentTime": "16:00"
+      }
+    ]
   },
   {
     "id": "6",
@@ -69,7 +114,16 @@
     "email": "sarah.davis@example.com",
     "address": "987 Birch Rd, Springfield",
     "medicalRecordNumber": "MRN1006",
-    "doctorsId": "6"
+    "doctorsId": "6",
+    "doctorsName": "Dr. Carter",
+    "appointments": [
+      {
+        "appointmentId": "A7",
+        "doctorsId": "3",
+        "doctorsName": "Dr. Lee",
+        "appointmentTime": "13:10"
+      }
+    ]
   },
   {
     "id": "7",
@@ -81,7 +135,16 @@
     "email": "matthew.miller@example.com",
     "address": "246 Elm St, Springfield",
     "medicalRecordNumber": "MRN1007",
-    "doctorsId": "7"
+    "doctorsId": "7",
+    "doctorsName": "Dr. Nguyen",
+    "appointments": [
+      {
+        "appointmentId": "A9",
+        "doctorsId": "10",
+        "doctorsName": "Dr. Robinson",
+        "appointmentTime": "17:25"
+      }
+    ]
   },
   {
     "id": "8",
@@ -93,7 +156,16 @@
     "email": "jessica.wilson@example.com",
     "address": "135 Spruce Ave, Springfield",
     "medicalRecordNumber": "MRN1008",
-    "doctorsId": "8"
+    "doctorsId": "8",
+    "doctorsName": "Dr. Martinez",
+    "appointments": [
+      {
+        "appointmentId": "A2",
+        "doctorsId": "2",
+        "doctorsName": "Dr. Johnson",
+        "appointmentTime": "14:30"
+      }
+    ]
   },
   {
     "id": "9",
@@ -105,7 +177,16 @@
     "email": "christopher.moore@example.com",
     "address": "369 Willow Rd, Springfield",
     "medicalRecordNumber": "MRN1009",
-    "doctorsId": "9"
+    "doctorsId": "9",
+    "doctorsName": "Dr. Thompson",
+    "appointments": [
+      {
+        "appointmentId": "A10",
+        "doctorsId": "6",
+        "doctorsName": "Dr. Carter",
+        "appointmentTime": "12:05"
+      }
+    ]
   },
   {
     "id": "10",
@@ -117,6 +198,15 @@
     "email": "ashley.taylor@example.com",
     "address": "258 Aspen St, Springfield",
     "medicalRecordNumber": "MRN1010",
-    "doctorsId": "10"
+    "doctorsId": "10",
+    "doctorsName": "Dr. Robinson",
+    "appointments": [
+      {
+        "appointmentId": "A6",
+        "doctorsId": "5",
+        "doctorsName": "Dr. Kim",
+        "appointmentTime": "11:20"
+      }
+    ]
   }
 ]

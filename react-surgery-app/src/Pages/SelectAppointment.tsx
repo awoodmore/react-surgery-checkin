@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 import type { Appointment } from "../Types/Appointment";
 
 const SelectAppointment = () => {
-  const [appointmentData, setAppointmentData] = useState<any[]>([]);
-  const [patientData, setPatientData] = useState<any[]>([]);
   const [appointments, setAppointments] = useState<Appointment[]>([]);
-  const [doctorsData, setDoctorsData] = useState<any[]>([]);
   const [selectedAppointments, setSelectedAppointments] = useState<
     Appointment[]
   >([]);
@@ -30,50 +27,32 @@ const SelectAppointment = () => {
     "12": "December",
   };
 
+  // Fetch and map PatientAppointments.json to Appointment objects
+  // Assume this JSON data comes from an API endpoint and has been returned in this format.
   useEffect(() => {
     axios
-      .get("/db/Appointments.json")
-      .then((res: any) => setAppointmentData(res.data))
+      .get("/db/PatientAppointments.json")
+      .then((res: any) => {
+        const data = res.data;
+        // Flatten all patient appointments into Appointment objects
+        const mappedAppointments: Appointment[] = data.flatMap((patient: any) =>
+          (patient.appointments || []).map((appt: any) => ({
+            appointmentId: appt.appointmentId,
+            patientId: patient.id,
+            doctorsId: appt.doctorsId,
+            appointmentTime: appt.appointmentTime,
+            patientName: `${patient.firstName} ${patient.lastName}`,
+            patientDateOfBirth: patient.dateOfBirth,
+            doctorsName: appt.doctorsName || "",
+          }))
+        );
+        setAppointments(mappedAppointments);
+      })
       .catch((err: any) => console.log(err));
   }, []);
-
-  useEffect(() => {
-    axios
-      .get("/db/PatientData.json")
-      .then((res: any) => setPatientData(res.data))
-      .catch((err: any) => console.log(err));
-  }, []);
-
-  useEffect(() => {
-    axios
-      .get("/db/DoctorsData.json")
-      .then((res: any) => setDoctorsData(res.data))
-      .catch((err: any) => console.log(err));
-  }, []);
-
-  useEffect(() => {
-    if (
-      appointmentData.length > 0 &&
-      patientData.length > 0 &&
-      doctorsData.length > 0
-    ) {
-      const merged: Appointment[] = appointmentData.map((appt) => {
-        const patient = patientData.find((p) => p.id === appt.patientId);
-        const doctor = doctorsData.find((d) => d.id === appt.doctorsId);
-        return {
-          ...appt,
-          patientName: patient
-            ? `${patient.firstName} ${patient.lastName}`
-            : "",
-          patientDateOfBirth: patient ? patient.dateOfBirth : "",
-          doctorsName: doctor ? doctor.doctorsName : "",
-        };
-      });
-      setAppointments(merged);
-    }
-  }, [appointmentData, patientData, doctorsData]);
 
   // Get unique years from patientDateOfBirth in appointments
+  // Assumes the data of birth is in "YYYY-MM-DD" format and the year is the first 4 characters
   const uniqueYears = Array.from(
     new Set(
       appointments
@@ -91,7 +70,9 @@ const SelectAppointment = () => {
     setSelectedAppointments(filtered);
     setStage(2); // Move to Select Month stage
 
-    // Create a const selectMonths that has a random selection of 7 months from monthNames but must include the uniqueMonths. The const must contain unique values.
+    // Create a const selectMonths that has a random selection of 7 months from monthNames but must include the uniqueMonths.
+    //  The const must contain unique values.
+    // Assumes the month is characters 5 and 6 in the "YYYY-MM-DD" format
     const allMonthKeys = Object.keys(monthNames);
     // Get unique months from filtered appointments
     const uniqueMonths = Array.from(
@@ -101,6 +82,7 @@ const SelectAppointment = () => {
           .filter((month) => month)
       )
     );
+    // initialize selectMonths with uniqueMonths and add random months until we have 7
     let selectMonths = [...uniqueMonths];
     while (selectMonths.length < 7) {
       const randomMonth =
@@ -114,6 +96,7 @@ const SelectAppointment = () => {
   };
 
   // Handler for month button click
+  // Assumes the month is characters 5 and 6 in the "YYYY-MM-DD" format
   const handleMonthClick = (month: string) => {
     const filtered = selectedAppointments.filter(
       (appt) =>
@@ -124,6 +107,7 @@ const SelectAppointment = () => {
   };
 
   // Handler for day button click
+  // Assumes the day is characters 8 and 9 in the "YYYY-MM-DD" format
   const handleDayClick = (day: string) => {
     const filtered = selectedAppointments.filter(
       (appt) =>
