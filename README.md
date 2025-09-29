@@ -1,3 +1,6 @@
+
+<img width="2288" height="1134" alt="ReactSurgeryApp" src="https://github.com/user-attachments/assets/de79dc70-e011-42e8-a97a-83cceb9b9062" />
+
 **To run the app:**
 
 i) Open the react-surgery-checkin folder in VSCode
